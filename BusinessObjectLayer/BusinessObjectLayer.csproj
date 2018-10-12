@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E846FAEE-42EF-40AF-B901-0EE45FD5990F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessObjectLayer</RootNamespace>
+    <AssemblyName>BusinessObjectLayer</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/BusinessObjectLayer/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountModule\clsAccountsObjects.cs" />
+    <Compile Include="Admin\clsMenu.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsBenefitGroupLineMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsBM_InclusionApproval.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsEmailGroupMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsBACommonTypes.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsBenefitLineMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsBenefitSchedule.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsBM_HeaderMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsBM_TemplateUnderWriter.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsDocumentComMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsExtraneousPerilsMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsFireTariffGroupMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsIHBenefitScheduleLimit.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsIHPaymentMode.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsIHPremiumRating.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsIHProduct.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsIllnessMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsInterestMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsLocationInterestMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsMotorTariffMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsNewPremiumRateMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsBM_TemplateMapping.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsBM_TemplateMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsSubBenefitLineMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsTemplateDefault.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsLegislationNoteMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsVehicleDetailMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\cls_BMScheme.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsECClaim.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsECClaimDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\ClsECClaimFeeSettlement.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsECClaimFileUpload.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsECClaimFollowUp.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsECClaimNote.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsECClaimPayment.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsECClaimSickLeave.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsECClaimUnderwriter.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsNonECClaim.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsNonECClaimDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsNonECClaimFileUpload.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsNonECClaimFollowUp.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsNonECClaimPayment.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\clsNonECClaimUnderwriter.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsAgentRequest.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsBMAutoComplete.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsClientMaster.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsClientReassignment.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsContacts.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsDebiteNoteWOCoverNote.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsDebiteNoteWOCoverNoteDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsDebitNoteWOCoverNoteAgent.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsDebitNoteWOCoverNoteClient.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsDebitNoteWOCoverNoteFileUpload.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsDebitNoteWOCoverNoteInstalment.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsDebitNoteWOCoverNoteUnderWriter.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\CPD\clsCPD.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EBClaims\clsCostAdjustification.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EBClaims\clsEBClaimBatchFileUpload.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EBClaims\clsEBClaimBenefitScheduleDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EBClaims\clsEBClaimComplete.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EBClaims\clsEBClaimCostAdjudicationDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EBClaims\clsEBClaimDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EBClaims\clsEBClaimFileUpload.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EBClaims\clsEBClaimLimit.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EBClaims\clsEBClaimPaymentDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EBClaims\clsEBClaimRecordDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EBClaims\EbTagDiagnosisDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBMemberAddress.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBMemberDependantDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBMemberDependantRegistration.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBMemberDependantRegistrationFileUpload.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBMemberDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBMemberOrganisation.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBMemberPayment.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBMemberRegistration.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBMemberRegistrationFileUpload.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBMemberUpload.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBUnderwriterBenefit.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBUnderwriterDecision.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBUnderwriterDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsEBUnderwriterFileUpload.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\clsDiaryInfo.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\ClsExcessDeductibleSummary.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\clsInsuredPersonDetail.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\clsPolExtraneousPerils.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\clsRatingDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\clsMotorDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\clsMultiBilling.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\clsPremiumDetails.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\clsQuotation.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\clsRenewalChkList.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\clsUWCoverage.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\clsVesselDetails.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsICD10.cs" />
+    <Compile Include="BrokingModule\Reports\clsControlReports.cs" />
+    <Compile Include="BrokingModule\Reports\clsEBLetter.cs" />
+    <Compile Include="BrokingModule\Reports\clsEBRenewalLetter.cs" />
+    <Compile Include="BrokingModule\Reports\clsECLetter.cs" />
+    <Compile Include="BrokingModule\Reports\clsEvenOutReport.cs" />
+    <Compile Include="BrokingModule\Reports\clsFooterCountry.cs" />
+    <Compile Include="BrokingModule\Reports\clsPolicySlip.cs" />
+    <Compile Include="BrokingModule\Reports\clsDivisionalGropuing.cs" />
+    <Compile Include="Common\JobSchedule.cs" />
+    <Compile Include="FlexServices\FlexBS\FlexAttachementList.cs" />
+    <Compile Include="FlexServices\FlexBS\FlexBsToCsv.cs" />
+    <Compile Include="FlexServices\FlexIRM\FlexAttachementList.cs" />
+    <Compile Include="FlexServices\FlexIRM\FlexBsToCsv.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\clsConditionMaster.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\clsConditionTemplate.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\clsConditionTemplateMapping.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\clsExcessMaster.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\clsExportPremiumInvSetup.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\clsLegislationNoteMaster.cs" />
+    <Compile Include="RIBrokingModule\Claims\RIClaimDetails.cs" />
+    <Compile Include="RIBrokingModule\Claims\RIClaimDetailsCollection.cs" />
+    <Compile Include="RIBrokingModule\Claims\RIClaimSearch.cs" />
+    <Compile Include="RIBrokingModule\Claims\RIClaimSummary.cs" />
+    <Compile Include="RIBrokingModule\ClsRIAutoComplete.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\ClsConditions.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\ClsCoverNoteEnquiry.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\ClsExcessDeductibleSummary.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\ClsFileAttachment.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\ClsMarket.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\ClsPremiumSummarySubTotal.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\ClsPremiumSummaryTotal.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\clsRICNCoverage.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\ClsRICNGeneralInformation.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\ClsRICNLocationItems.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\ClsRICNPopUp.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\clsRIQuotation.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\ClsTSILimitSummary.cs" />
+    <Compile Include="RIBrokingModule\Invoice\RIInvoiceAccountsSection.cs" />
+    <Compile Include="RIBrokingModule\Invoice\RIInvoiceSearch.cs" />
+    <Compile Include="RIBrokingModule\Invoice\RIInvoiceSummary.cs" />
+    <Compile Include="RIBrokingModule\Invoice\RIReferralSummary.cs" />
+    <Compile Include="RIBrokingModule\Invoice\RIReinsuerSummary.cs" />
+    <Compile Include="RIBrokingModule\Reports\clsFooterCountry.cs" />
+    <Compile Include="RIBrokingModule\Reports\clsLetter.cs" />
+    <Compile Include="RIBrokingModule\Reports\clsPolicySlip.cs" />
+    <Compile Include="RIBrokingModule\Reports\clsReport.cs" />
+    <Compile Include="RIBrokingModule\RIBrokingSystem\clsCedantMaster.cs" />
+    <Compile Include="Common\clsFileUpload.cs" />
+    <Compile Include="RIBrokingModule\RIBrokingSystem\clsIRMAutoComplete.cs" />
+    <Compile Include="RIBrokingModule\RIBrokingSystem\clsReinsurerMaster.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsUnApprovedInfo.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsUnderWriterMaster.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsXmlUnApprovedInfo.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsClaimAgentMaster.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsBankMaster.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsCauseOfInjuryMaster.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsClaimPaymentTypeMaster.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsDiagnosisMaster.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsFollowUpReasonMaster.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsLossNatureMaster.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsLossTypeMaster.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsNatureOfInjuryMaster.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsPartOfBodyMaster.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsPaymentDescMaster.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsPendingReasonMaster.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsRejectReasonMaster.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\clsSurgicalProcedureMaster.cs" />
+    <Compile Include="Common\SerializeDeserialize.cs" />
+    <Compile Include="Common\FileUpload.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\clsRI_ProvinceMaster.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\RI_Department.cs" />
+    <Compile Include="RIBrokingModule\RIClaimAdmin\clsLocationMaster.cs" />
+    <Compile Include="RIBrokingModule\RIClaimAdmin\clsRemarkMaster.cs" />
+    <Compile Include="SystemAdmin\AccountMaster\clsAccPeriod.cs" />
+    <Compile Include="SystemAdmin\AccountMaster\clsBankMaster.cs" />
+    <Compile Include="SystemAdmin\AccountMaster\clsCurrency.cs" />
+    <Compile Include="SystemAdmin\AccountMaster\clsCurrExchangeRate.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsBranch.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsBusinessNature.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsClassTemplateSortOrder.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsClassTemplate.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsSubClass.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsSubClassTemplate.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsSubClassTemplateSortOrder.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\SA_Class.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsBranchMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsClientBandingMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsClientProfileMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsClientSegmentMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsClientSource.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsClientSource_IndustryType_RiskProfile.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\ClsCorpGrpMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsDashBoard.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsIndustryMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsOccupationMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\ClsProfitCentre.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsProvinceMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsRegion.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsRegionMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsSubDistrictMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsSuspTermReasonMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsVAT_SBT_WHT.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsVIPClassification.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsWorldRegionMaster.cs" />
+    <Compile Include="SystemAdmin\clsMigration.cs" />
+    <Compile Include="SystemAdmin\LetterTemplates\clsLetterTemplates.cs" />
+    <Compile Include="SystemAdmin\Reports\clsAdministrationReport.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsActivityApprovalAuthority.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsBranchList.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsBroadcastMaster.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsCompanyList.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsDivisionalGrouping.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsDocumentCompliance.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsElementAccess.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsEndUserManual.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsGradeLimit.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsGroupAccess.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsJunction.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsLedgerClass.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsLedgerSubClass.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsMasTransfAuthority.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsProducerMaster.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsUserAccess.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsUserAccessAssignmentMaster.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsUserActivityApprovalLevel.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsUserLimit.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsUserMaster.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsUserReassingnment.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsUserSuspension.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\ExcessDeductible.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\SA_Grade.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsGroupMaster.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsSourceCodeMaster.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsSubGroupMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsCityMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsSOB.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsSourceCode.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsSubsidiarySCode1.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsSubsidiarySCode2.cs" />
+    <Compile Include="Admin\clsLogin.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\clsTerritoryMaster.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsCompanyMaster.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\Team.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

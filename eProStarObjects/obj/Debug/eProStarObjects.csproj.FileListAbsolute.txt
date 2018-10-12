@@ -1,0 +1,12 @@
+D:\GIT Projects\eProStarObjects\eProStarObjects\eProStarObjects\bin\Debug\eProStarObjects.dll
+D:\GIT Projects\eProStarObjects\eProStarObjects\eProStarObjects\bin\Debug\eProStarObjects.pdb
+D:\GIT Projects\eProStarObjects\eProStarObjects\eProStarObjects\obj\Debug\ResolveAssemblyReference.cache
+D:\GIT Projects\eProStarObjects\eProStarObjects\eProStarObjects\obj\Debug\eProStarObjects.dll
+D:\GIT Projects\eProStarObjects\eProStarObjects\eProStarObjects\obj\Debug\eProStarObjects.pdb
+D:\GIT Projects\eProStarObjects\eProStarObjects\eProStarObjects\bin\Debug\Telerik.Reporting.dll
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\eProStarObjects\bin\Debug\eProStarObjects.dll
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\eProStarObjects\bin\Debug\eProStarObjects.pdb
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\eProStarObjects\bin\Debug\Telerik.Reporting.dll
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\eProStarObjects\obj\Debug\eProStarObjects.dll
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\eProStarObjects\obj\Debug\eProStarObjects.pdb
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\eProStarObjects\obj\Debug\eProStarObjects.csprojResolveAssemblyReference.cache

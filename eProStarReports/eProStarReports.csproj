@@ -1,0 +1,1911 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E4AA203-F78D-4134-B113-3003D764AC43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eProStarReports</RootNamespace>
+    <AssemblyName>eProStarReports</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BusinessAccessLayer, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\BusinessAccessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="BusinessObjectLayer, Version=1.0.0.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\BusinessObjectLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="DataAccessLayer, Version=1.0.0.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\DataAccessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=11.0.17.118, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataAccessLayer\ReferenceDLLs\Telerik.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.OpenXmlRendering, Version=11.0.17.118, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataAccessLayer\ReferenceDLLs\Telerik.Reporting.OpenXmlRendering.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Service, Version=11.0.17.118, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataAccessLayer\ReferenceDLLs\Telerik.Reporting.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\DataAccessLayer\ReferenceDLLs\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountReports\AgeingAnalysisReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\AgeingAnalysisReport.Designer.cs">
+      <DependentUpon>AgeingAnalysisReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\BalanceSheet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\BalanceSheet.Designer.cs">
+      <DependentUpon>BalanceSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\BatchPrintCreditNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\BatchPrintCreditNote.Designer.cs">
+      <DependentUpon>BatchPrintCreditNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\BatchPrintDebitNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\BatchPrintDebitNote.Designer.cs">
+      <DependentUpon>BatchPrintDebitNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\BatchPrintPettyCash.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\BatchPrintPettyCash.Designer.cs">
+      <DependentUpon>BatchPrintPettyCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\BIB\NonTradeCNVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\BIB\NonTradeCNVoucher.Designer.cs">
+      <DependentUpon>NonTradeCNVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\BIB\NonTradeDNVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\BIB\NonTradeDNVoucher.Designer.cs">
+      <DependentUpon>NonTradeDNVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\BIB\SOAH_SG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\BIB\SOAH_SG.Designer.cs">
+      <DependentUpon>SOAH_SG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\BIB\SOANTH_SG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\BIB\SOANTH_SG.Designer.cs">
+      <DependentUpon>SOANTH_SG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\BIB\SOANT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\BIB\SOANT.Designer.cs">
+      <DependentUpon>SOANT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\BIB\SOA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\BIB\SOA.Designer.cs">
+      <DependentUpon>SOA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\BIB\StatementOfAccount_InsurerSOA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\BIB\StatementOfAccount_InsurerSOA.Designer.cs">
+      <DependentUpon>StatementOfAccount_InsurerSOA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\BrokerageEarningReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\BrokerageEarningReport.Designer.cs">
+      <DependentUpon>BrokerageEarningReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\BrokerAuditList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\BrokerAuditList.Designer.cs">
+      <DependentUpon>BrokerAuditList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\ClientListingReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\ClientListingReport.Designer.cs">
+      <DependentUpon>ClientListingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\CompanyProductivityByClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\CompanyProductivityByClass.Designer.cs">
+      <DependentUpon>CompanyProductivityByClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\DetailsCreditorReconReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\DetailsCreditorReconReport.Designer.cs">
+      <DependentUpon>DetailsCreditorReconReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\EnclosureLetterReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\EnclosureLetterReport.Designer.cs">
+      <DependentUpon>EnclosureLetterReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\FinancialReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\FinancialReport.Designer.cs">
+      <DependentUpon>FinancialReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\Galaxy\JournalVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\Galaxy\JournalVoucher.designer.cs">
+      <DependentUpon>JournalVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\Galaxy\PaymentVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\Galaxy\PaymentVoucher.designer.cs">
+      <DependentUpon>PaymentVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\Galaxy\ReceiptVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\Galaxy\ReceiptVoucher.designer.cs">
+      <DependentUpon>ReceiptVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\Galaxy\tlrPaymentVouchercs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\Galaxy\tlrPaymentVouchercs.designer.cs">
+      <DependentUpon>tlrPaymentVouchercs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\GeneralListAll.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\GeneralListAll.Designer.cs">
+      <DependentUpon>GeneralListAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\GLChartOfAccounts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\GLChartOfAccounts.Designer.cs">
+      <DependentUpon>GLChartOfAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\GLDetailListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\GLDetailListing.Designer.cs">
+      <DependentUpon>GLDetailListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\GLTranList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\GLTranList.Designer.cs">
+      <DependentUpon>GLTranList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\GSTInputOutputDetailedReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\GSTInputOutputDetailedReport.Designer.cs">
+      <DependentUpon>GSTInputOutputDetailedReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\GSTInputOutputSummaryReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\GSTInputOutputSummaryReport.Designer.cs">
+      <DependentUpon>GSTInputOutputSummaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\GstReport.cs" />
+    <Compile Include="AccountReports\InsurerReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\InsurerReport.Designer.cs">
+      <DependentUpon>InsurerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\journalLst.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\journalLst.Designer.cs">
+      <DependentUpon>journalLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\JournalVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\JournalVoucher.designer.cs">
+      <DependentUpon>JournalVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\MatchTransactionReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\MatchTransactionReport.Designer.cs">
+      <DependentUpon>MatchTransactionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\PremiumWarrantyLetter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\PremiumWarrantyLetter.Designer.cs">
+      <DependentUpon>PremiumWarrantyLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\ReceiptListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\OutStandingAgeingReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\ReceiptListing.Designer.cs">
+      <DependentUpon>ReceiptListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\OutStandingAgeingReport.Designer.cs">
+      <DependentUpon>OutStandingAgeingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\ReceiptLst.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\ReceiptLst.Designer.cs">
+      <DependentUpon>ReceiptLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\ReceiptVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\ReceiptVoucher.designer.cs">
+      <DependentUpon>ReceiptVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\RefundLetter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\RefundLetter.Designer.cs">
+      <DependentUpon>RefundLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\StandardRatedListingToInsurer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\StandardRatedListingToInsurer.Designer.cs">
+      <DependentUpon>StandardRatedListingToInsurer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\StatementofAccount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\StatementofAccount.Designer.cs">
+      <DependentUpon>StatementofAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\StatementofAccount_Insurer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\StatementofAccount_Insurer.Designer.cs">
+      <DependentUpon>StatementofAccount_Insurer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\TaxInvoiceToInsurers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\TaxInvoiceToInsurers.Designer.cs">
+      <DependentUpon>TaxInvoiceToInsurers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrBF1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrBF1.Designer.cs">
+      <DependentUpon>tlrBF1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrBF2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrBF2.Designer.cs">
+      <DependentUpon>tlrBF2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrBF3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrBF3.Designer.cs">
+      <DependentUpon>tlrBF3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrBF3S2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrBF3S2.Designer.cs">
+      <DependentUpon>tlrBF3S2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrBF3S3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrBF3S3.Designer.cs">
+      <DependentUpon>tlrBF3S3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrBF9.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrBF9.Designer.cs">
+      <DependentUpon>tlrBF9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrGoodsAndServiceTaxReturn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrGoodsAndServiceTaxReturn.Designer.cs">
+      <DependentUpon>tlrGoodsAndServiceTaxReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrGSTAdditionalInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrGSTAdditionalInfo.Designer.cs">
+      <DependentUpon>tlrGSTAdditionalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrGstBadDebtClaims.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrGstBadDebtClaims.Designer.cs">
+      <DependentUpon>tlrGstBadDebtClaims.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrGSTSummaryTotAcqInTax.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrGSTSummaryTotAcqInTax.Designer.cs">
+      <DependentUpon>tlrGSTSummaryTotAcqInTax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrListDrCrTaxInvForGST.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrListDrCrTaxInvForGST.Designer.cs">
+      <DependentUpon>tlrListDrCrTaxInvForGST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrPaymentLst.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrPaymentLst.designer.cs">
+      <DependentUpon>tlrPaymentLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrPaymentReciept.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrPaymentReciept.designer.cs">
+      <DependentUpon>tlrPaymentReciept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrPaymentVouchercs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrPaymentVouchercs.designer.cs">
+      <DependentUpon>tlrPaymentVouchercs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\tlrTotSuppNOutTax.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\tlrTotSuppNOutTax.Designer.cs">
+      <DependentUpon>tlrTotSuppNOutTax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\TransactionLog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\TransactionLog.Designer.cs">
+      <DependentUpon>TransactionLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\TrialBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\TrialBalance.Designer.cs">
+      <DependentUpon>TrialBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\TrialBalanceWithOB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\TrialBalanceWithOB.Designer.cs">
+      <DependentUpon>TrialBalanceWithOB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\UnMatchingReceiptListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\UnMatchingReceiptListing.Designer.cs">
+      <DependentUpon>UnMatchingReceiptListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReports\VoucherLawton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReports\VoucherLawton.Designer.cs">
+      <DependentUpon>VoucherLawton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Broking\BIB\PrintRenewalNotice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Broking\BIB\PrintRenewalNotice.Designer.cs">
+      <DependentUpon>PrintRenewalNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Broking\BIB\PrintRenewalSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Broking\BIB\PrintRenewalSummary.Designer.cs">
+      <DependentUpon>PrintRenewalSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Broking\Acclaim\PrintRenewalNotice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Broking\Acclaim\PrintRenewalNotice.Designer.cs">
+      <DependentUpon>PrintRenewalNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Broking\Acclaim\PrintRenewalSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Broking\Acclaim\PrintRenewalSummary.Designer.cs">
+      <DependentUpon>PrintRenewalSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHReports\HBCDailyReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IHReports\HBCDailyReport.Designer.cs">
+      <DependentUpon>HBCDailyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHReports\IHMasterPolicy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IHReports\IHMasterPolicy.Designer.cs">
+      <DependentUpon>IHMasterPolicy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHReports\RptIHSafetySummaryCanSBT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IHReports\RptIHSafetySummaryCanSBT.Designer.cs">
+      <DependentUpon>RptIHSafetySummaryCanSBT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHReports\RptIHSafetySummaryCanVAT.cs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IHReports\RptIHSafetySummaryCanVAT.cs.Designer.cs">
+      <DependentUpon>RptIHSafetySummaryCanVAT.cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHReports\RptIHSafetySummaryReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IHReports\RptIHSafetySummaryReport.Designer.cs">
+      <DependentUpon>RptIHSafetySummaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHReports\RptIHSummaryReportVAT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IHReports\RptIHSummaryReportVAT.Designer.cs">
+      <DependentUpon>RptIHSummaryReportVAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHReports\RptIndividualSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IHReports\RptIndividualSummary.Designer.cs">
+      <DependentUpon>RptIndividualSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHReports\RptIndividualSummaryReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IHReports\RptIndividualSummaryReport.Designer.cs">
+      <DependentUpon>RptIndividualSummaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHReports\RptMonthlyAvivaReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IHReports\RptMonthlyAvivaReport.Designer.cs">
+      <DependentUpon>RptMonthlyAvivaReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHReports\RptMonthlyProfitability.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IHReports\RptMonthlyProfitability.Designer.cs">
+      <DependentUpon>RptMonthlyProfitability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IRMLetters\ltrCashCallLetter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IRMLetters\ltrCashCallLetter.Designer.cs">
+      <DependentUpon>ltrCashCallLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IRMLetters\ltrClaimMovmentLetter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IRMLetters\ltrClaimMovmentLetter.Designer.cs">
+      <DependentUpon>ltrClaimMovmentLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IRMLetters\ltrCoverNotePrint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IRMLetters\ltrCoverNotePrint.Designer.cs">
+      <DependentUpon>ltrCoverNotePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IRMLetters\ltrINVDebitNoteLetter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IRMLetters\ltrINVDebitNoteLetter.Designer.cs">
+      <DependentUpon>ltrINVDebitNoteLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IRMLetters\ltrInvoiceDebitNoteLetter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IRMLetters\ltrInvoiceDebitNoteLetter.Designer.cs">
+      <DependentUpon>ltrInvoiceDebitNoteLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IRMLetters\ltrPaidClaimAckLetter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IRMLetters\ltrPaidClaimAckLetter.Designer.cs">
+      <DependentUpon>ltrPaidClaimAckLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\ClaimFileReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\ClaimFileReport.Designer.cs">
+      <DependentUpon>ClaimFileReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\ConsultancyFeeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\ConsultancyFeeReport.Designer.cs">
+      <DependentUpon>ConsultancyFeeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\INPPWDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\INPPWDetails.Designer.cs">
+      <DependentUpon>INPPWDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\IN30DGPDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\IN30DGPDetails.Designer.cs">
+      <DependentUpon>IN30DGPDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\INPBCWDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\INPBCWDetails.Designer.cs">
+      <DependentUpon>INPBCWDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\INPIPWDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\INPIPWDetails.Designer.cs">
+      <DependentUpon>INPIPWDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\Premium30DaysGracePeriod.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\Premium30DaysGracePeriod.Designer.cs">
+      <DependentUpon>Premium30DaysGracePeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\Premium30DaysGracePeriod_OfficeCopy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\Premium30DaysGracePeriod_OfficeCopy.Designer.cs">
+      <DependentUpon>Premium30DaysGracePeriod_OfficeCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\PremiumBeforeCoverWarranty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\PremiumBeforeCoverWarranty.Designer.cs">
+      <DependentUpon>PremiumBeforeCoverWarranty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\PremiumBeforeCoverWarranty_OfficeCopy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\PremiumBeforeCoverWarranty_OfficeCopy.Designer.cs">
+      <DependentUpon>PremiumBeforeCoverWarranty_OfficeCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\PremiumInstalmentPaymentWarranty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\PremiumInstalmentPaymentWarranty.Designer.cs">
+      <DependentUpon>PremiumInstalmentPaymentWarranty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\PremiumInstalmentPaymentWarranty_OfficeCopy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\PremiumInstalmentPaymentWarranty_OfficeCopy.Designer.cs">
+      <DependentUpon>PremiumInstalmentPaymentWarranty_OfficeCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\PremiumPaymentWarranty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\PremiumPaymentWarranty.Designer.cs">
+      <DependentUpon>PremiumPaymentWarranty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\PremiumPaymentWarranty_OfficeCopy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\PremiumPaymentWarranty_OfficeCopy.Designer.cs">
+      <DependentUpon>PremiumPaymentWarranty_OfficeCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Acclaim\TabularDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Acclaim\TabularDetails.Designer.cs">
+      <DependentUpon>TabularDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Aviva_Annually.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Aviva_Annually.Designer.cs">
+      <DependentUpon>Aviva_Annually.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Aviva_COI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Aviva_COI.Designer.cs">
+      <DependentUpon>Aviva_COI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Galaxy\PremiumPaymentWarranty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Galaxy\PremiumPaymentWarranty.Designer.cs">
+      <DependentUpon>PremiumPaymentWarranty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Galaxy\PremiumPaymentWarranty_AccountCopy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Galaxy\PremiumPaymentWarranty_AccountCopy.Designer.cs">
+      <DependentUpon>PremiumPaymentWarranty_AccountCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Galaxy\PremiumPaymentWarranty_FileCopy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Galaxy\PremiumPaymentWarranty_FileCopy.Designer.cs">
+      <DependentUpon>PremiumPaymentWarranty_FileCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Galaxy\PremiumPaymentWarranty_OfficeCopy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Galaxy\PremiumPaymentWarranty_OfficeCopy.Designer.cs">
+      <DependentUpon>PremiumPaymentWarranty_OfficeCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Galaxy\PremiumPaymentWarranty_Original.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Galaxy\PremiumPaymentWarranty_Original.Designer.cs">
+      <DependentUpon>PremiumPaymentWarranty_Original.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Howden\BrokerageDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Howden\BrokerageDetail.designer.cs">
+      <DependentUpon>BrokerageDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Howden\BrokerageInstallmentDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Howden\BrokerageInstallmentDetail.designer.cs">
+      <DependentUpon>BrokerageInstallmentDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRptCommision_Invoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRptCommision_Invoice.Designer.cs">
+      <DependentUpon>DebitNoteRptCommision_Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRptGeneralPremiumClosing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRptGeneralPremiumClosing.designer.cs">
+      <DependentUpon>DebitNoteRptGeneralPremiumClosing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRptGeneralReport_FileCopy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRptGeneralReport_FileCopy.designer.cs">
+      <DependentUpon>DebitNoteRptGeneralReport_FileCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRptGeneral_FileCopy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRptGeneral_FileCopy.designer.cs">
+      <DependentUpon>DebitNoteRptGeneral_FileCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRpt_ConsultancyFee.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRpt_ConsultancyFee.Designer.cs">
+      <DependentUpon>DebitNoteRpt_ConsultancyFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRpt_ConsultancyFeeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRpt_ConsultancyFeeReport.designer.cs">
+      <DependentUpon>DebitNoteRpt_ConsultancyFeeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Howden\EndorsementRptClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Howden\EndorsementRptClient.Designer.cs">
+      <DependentUpon>EndorsementRptClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Howden\Statistics.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Howden\Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Howden\TaxCreditNoteRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Howden\TaxCreditNoteRpt.designer.cs">
+      <DependentUpon>TaxCreditNoteRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRptGeneral.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Howden\DebitNoteRptGeneral.designer.cs">
+      <DependentUpon>DebitNoteRptGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\BIB\DebitCreditNoteVessel_LCH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\BIB\DebitCreditNoteVessel_LCH.Designer.cs">
+      <DependentUpon>DebitCreditNoteVessel_LCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\BIB\DebitNoteRpt_CommissionInward.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\BIB\DebitNoteRpt_CommissionInward.Designer.cs">
+      <DependentUpon>DebitNoteRpt_CommissionInward.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\BIB\DebitNoteRpt_ConsultancyFee.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\BIB\DebitNoteRpt_ConsultancyFee.Designer.cs">
+      <DependentUpon>DebitNoteRpt_ConsultancyFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\BIB\DebitNoteRptCommision_Invoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\BIB\DebitNoteRptCommision_Invoice.Designer.cs">
+      <DependentUpon>DebitNoteRptCommision_Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\BIB\DebitNoteRptGeneral.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\BIB\DebitNoteRptGeneral.designer.cs">
+      <DependentUpon>DebitNoteRptGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\BIB\DebitNoteRptGeneral_Invoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\BIB\DebitNoteRptGeneral_Invoice.Designer.cs">
+      <DependentUpon>DebitNoteRptGeneral_Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\DirectPremiumRegisterReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\DirectPremiumRegisterReport.Designer.cs">
+      <DependentUpon>DirectPremiumRegisterReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\BIB\DiretCommissionOutgoCreditNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\BIB\DiretCommissionOutgoCreditNote.Designer.cs">
+      <DependentUpon>DiretCommissionOutgoCreditNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\BIB\DNCNMotorExcess.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\BIB\DNCNMotorExcess.Designer.cs">
+      <DependentUpon>DNCNMotorExcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\BIB\EndorsementRptClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\BIB\EndorsementRptClient.Designer.cs">
+      <DependentUpon>EndorsementRptClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\BIB\EndorsementRptInsurer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\BIB\EndorsementRptInsurer.Designer.cs">
+      <DependentUpon>EndorsementRptInsurer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\PremiumReportBIB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\PremiumReportBIB.Designer.cs">
+      <DependentUpon>PremiumReportBIB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\PremiumReportSG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\PremiumReportSG.Designer.cs">
+      <DependentUpon>PremiumReportSG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\PremiumReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\PremiumReport.Designer.cs">
+      <DependentUpon>PremiumReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\BIB\TaxCreditNoteRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\BIB\TaxCreditNoteRpt.Designer.cs">
+      <DependentUpon>TaxCreditNoteRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ClaimFileReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ClaimFileReport.Designer.cs">
+      <DependentUpon>ClaimFileReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\DebitNoteKIBFeeBillingInstallment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\DebitNoteKIBFeeBillingInstallment.Designer.cs">
+      <DependentUpon>DebitNoteKIBFeeBillingInstallment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\DebitNoteRptBillingInstallment_Copy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\DebitNoteRptBillingInstallment_Copy.Designer.cs">
+      <DependentUpon>DebitNoteRptBillingInstallment_Copy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\DebitNoteRptBillingInstallment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\DebitNoteRptBillingInstallment.Designer.cs">
+      <DependentUpon>DebitNoteRptBillingInstallment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\DebitNoteRptBilling_Acclaim.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\DebitNoteRptBilling_Acclaim.Designer.cs">
+      <DependentUpon>DebitNoteRptBilling_Acclaim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\DebitNoteRptCommision_Invoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\DebitNoteRptCommision_Invoice.Designer.cs">
+      <DependentUpon>DebitNoteRptCommision_Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\DebitNoteRptGeneral_Invoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\DebitNoteRptGeneral_Invoice.Designer.cs">
+      <DependentUpon>DebitNoteRptGeneral_Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\DebitNoteRptGeneral_LCH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\DebitNoteRptGeneral_LCH.Designer.cs">
+      <DependentUpon>DebitNoteRptGeneral_LCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\DebitCreditNoteVessel_LCH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\DebitCreditNoteVessel_LCH.Designer.cs">
+      <DependentUpon>DebitCreditNoteVessel_LCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\DebitNote_Client.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\DebitNote_Client.Designer.cs">
+      <DependentUpon>DebitNote_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\CreditNote_GI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\CreditNote_GI.Designer.cs">
+      <DependentUpon>CreditNote_GI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\DebitNote_GI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\DebitNote_GI.Designer.cs">
+      <DependentUpon>DebitNote_GI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\DNCNMotorExcess_LCH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\DNCNMotorExcess_LCH.Designer.cs">
+      <DependentUpon>DNCNMotorExcess_LCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\InPatientSubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\InPatientSubReport.Designer.cs">
+      <DependentUpon>InPatientSubReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\LAW\CreditNote_GI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\LAW\CreditNote_GI.Designer.cs">
+      <DependentUpon>CreditNote_GI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\LAW\DebitNote_GI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\LAW\DebitNote_GI.Designer.cs">
+      <DependentUpon>DebitNote_GI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\LAW\IHPrintFormat_Annually.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\LAW\IHPrintFormat_Annually.Designer.cs">
+      <DependentUpon>IHPrintFormat_Annually.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\LCH\DebitNoteRptGeneral_LCH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\LCH\DebitNoteRptGeneral_LCH.Designer.cs">
+      <DependentUpon>DebitNoteRptGeneral_LCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\LCH\DebitNoteVessel_LCH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\LCH\DebitNoteVessel_LCH.Designer.cs">
+      <DependentUpon>DebitNoteVessel_LCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\LCH\DNCNMotorExcess_LCH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\LCH\DNCNMotorExcess_LCH.Designer.cs">
+      <DependentUpon>DNCNMotorExcess_LCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrClaimSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrClaimSummary.Designer.cs">
+      <DependentUpon>ltrClaimSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrClaimTop10HospitalBenefit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrClaimTop10HospitalBenefit.Designer.cs">
+      <DependentUpon>ltrClaimTop10HospitalBenefit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrClientSettled.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrClientSettled.Designer.cs">
+      <DependentUpon>ltrClientSettled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrClientShortfall.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrClientShortfall.Designer.cs">
+      <DependentUpon>ltrClientShortfall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrECChineseEnglishFormEnquiryA1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrECChineseEnglishFormEnquiryA1.Designer.cs">
+      <DependentUpon>ltrECChineseEnglishFormEnquiryA1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrECChineseEnglishFormsEnquiry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrECChineseEnglishFormsEnquiry.Designer.cs">
+      <DependentUpon>ltrECChineseEnglishFormsEnquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrECChineseFormEnquiry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrECChineseFormEnquiry.Designer.cs">
+      <DependentUpon>ltrECChineseFormEnquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrECClientAcknowlegement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrECClientAcknowlegement.Designer.cs">
+      <DependentUpon>ltrECClientAcknowlegement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrECClientFollowup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrECClientFollowup.Designer.cs">
+      <DependentUpon>ltrECClientFollowup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrECEnglishFormEnquiry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrECEnglishFormEnquiry.Designer.cs">
+      <DependentUpon>ltrECEnglishFormEnquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrECUWAcknowledgement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrECUWAcknowledgement.Designer.cs">
+      <DependentUpon>ltrECUWAcknowledgement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrInsurerInpatient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrInsurerInpatient.Designer.cs">
+      <DependentUpon>ltrInsurerInpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrInsurerInpatient_test.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrInsurerInpatient_test.Designer.cs">
+      <DependentUpon>ltrInsurerInpatient_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrInsurerOutpatient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrInsurerOutpatient.Designer.cs">
+      <DependentUpon>ltrInsurerOutpatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrInsurerOutpatient1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrInsurerOutpatient1.Designer.cs">
+      <DependentUpon>ltrInsurerOutpatient1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrInsurerOutpatient_doc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrInsurerOutpatient_doc.Designer.cs">
+      <DependentUpon>ltrInsurerOutpatient_doc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrInsurerOutpatient_new.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrInsurerOutpatient_new.Designer.cs">
+      <DependentUpon>ltrInsurerOutpatient_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrMCClientAcknowledgment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrMCClientAcknowledgment.Designer.cs">
+      <DependentUpon>ltrMCClientAcknowledgment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrMCClientFaxAcknowledgement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrMCClientFaxAcknowledgement.Designer.cs">
+      <DependentUpon>ltrMCClientFaxAcknowledgement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrMCUWFaxAcknowledgement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrMCUWFaxAcknowledgement.Designer.cs">
+      <DependentUpon>ltrMCUWFaxAcknowledgement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrMedicalPaid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrMedicalPaid.Designer.cs">
+      <DependentUpon>ltrMedicalPaid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrMedRenInvitation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrMedRenInvitation.Designer.cs">
+      <DependentUpon>ltrMedRenInvitation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrMovementCover.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrMovementCover.Designer.cs">
+      <DependentUpon>ltrMovementCover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrMVClientFaxAcknowledgement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrMVClientFaxAcknowledgement.Designer.cs">
+      <DependentUpon>ltrMVClientFaxAcknowledgement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrMVClientFaxEnquiry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrMVClientFaxEnquiry.Designer.cs">
+      <DependentUpon>ltrMVClientFaxEnquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrMVUWFaxAcknowledgement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrMVUWFaxAcknowledgement.Designer.cs">
+      <DependentUpon>ltrMVUWFaxAcknowledgement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrNonMedicalRenInvitation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrNonMedicalRenInvitation.Designer.cs">
+      <DependentUpon>ltrNonMedicalRenInvitation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrPARClientAcknowledgement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrPARClientAcknowledgement.Designer.cs">
+      <DependentUpon>ltrPARClientAcknowledgement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrPARFollowUP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrPARFollowUP.Designer.cs">
+      <DependentUpon>ltrPARFollowUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrPARStatusEnquiry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrPARStatusEnquiry.Designer.cs">
+      <DependentUpon>ltrPARStatusEnquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrPARUWAcknowledgement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrPARUWAcknowledgement.Designer.cs">
+      <DependentUpon>ltrPARUWAcknowledgement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrPolicySlip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrPolicySlip.Designer.cs">
+      <DependentUpon>ltrPolicySlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrSlip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrSlip.Designer.cs">
+      <DependentUpon>ltrSlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrSlipN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrSlipN.Designer.cs">
+      <DependentUpon>ltrSlipN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrSlipSubreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrSlipSubreport.Designer.cs">
+      <DependentUpon>ltrSlipSubreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrSliptest.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrSliptest.Designer.cs">
+      <DependentUpon>ltrSliptest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrSlip_new.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrSlip_new.Designer.cs">
+      <DependentUpon>ltrSlip_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\ltrTopTenAmtByHospital.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\ltrTopTenAmtByHospital.Designer.cs">
+      <DependentUpon>ltrTopTenAmtByHospital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Premium30DaysGracePeriod.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Premium30DaysGracePeriod.Designer.cs">
+      <DependentUpon>Premium30DaysGracePeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\PremiumBeforeCoverWarranty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\PremiumBeforeCoverWarranty.Designer.cs">
+      <DependentUpon>PremiumBeforeCoverWarranty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\PremiumInstalmentPaymentWarranty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\PremiumInstalmentPaymentWarranty.Designer.cs">
+      <DependentUpon>PremiumInstalmentPaymentWarranty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\PremiumPaymentWarranty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\PremiumPaymentWarranty.Designer.cs">
+      <DependentUpon>PremiumPaymentWarranty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\PrintCoverNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\PrintCoverNote.Designer.cs">
+      <DependentUpon>PrintCoverNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\Renewal_Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\Renewal_Report.Designer.cs">
+      <DependentUpon>Renewal_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\rptClaimReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\rptClaimReport.Designer.cs">
+      <DependentUpon>rptClaimReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\rptClaimReportCover.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\rptClaimReportCover.Designer.cs">
+      <DependentUpon>rptClaimReportCover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\RptEBBenefitLimitSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\RptEBBenefitLimitSummary.Designer.cs">
+      <DependentUpon>RptEBBenefitLimitSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\RptEBPolPlan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\RptEBPolPlan.Designer.cs">
+      <DependentUpon>RptEBPolPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\RptEBPremiumRateSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\RptEBPremiumRateSummary.Designer.cs">
+      <DependentUpon>RptEBPremiumRateSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letters\RptEBPremiumSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Letters\RptEBPremiumSummary.Designer.cs">
+      <DependentUpon>RptEBPremiumSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AccountReports\AgeingAnalysisReport.resx">
+      <DependentUpon>AgeingAnalysisReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\BalanceSheet.resx">
+      <DependentUpon>BalanceSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\BatchPrintCreditNote.resx">
+      <DependentUpon>BatchPrintCreditNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\BatchPrintDebitNote.resx">
+      <DependentUpon>BatchPrintDebitNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\BatchPrintPettyCash.resx">
+      <DependentUpon>BatchPrintPettyCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\BIB\NonTradeCNVoucher.resx">
+      <DependentUpon>NonTradeCNVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\BIB\NonTradeDNVoucher.resx">
+      <DependentUpon>NonTradeDNVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\BIB\SOAH_SG.resx">
+      <DependentUpon>SOAH_SG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\BIB\SOANTH_SG.resx">
+      <DependentUpon>SOANTH_SG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\BIB\SOANT.resx">
+      <DependentUpon>SOANT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\BIB\SOA.resx">
+      <DependentUpon>SOA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\BIB\StatementOfAccount_InsurerSOA.resx">
+      <DependentUpon>StatementOfAccount_InsurerSOA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\BrokerageEarningReport.resx">
+      <DependentUpon>BrokerageEarningReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\BrokerAuditList.resx">
+      <DependentUpon>BrokerAuditList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\ClientListingReport.resx">
+      <DependentUpon>ClientListingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\CompanyProductivityByClass.resx">
+      <DependentUpon>CompanyProductivityByClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\DetailsCreditorReconReport.resx">
+      <DependentUpon>DetailsCreditorReconReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\EnclosureLetterReport.resx">
+      <DependentUpon>EnclosureLetterReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\FinancialReport.resx">
+      <DependentUpon>FinancialReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\Galaxy\JournalVoucher.resx">
+      <DependentUpon>JournalVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\Galaxy\PaymentVoucher.resx">
+      <DependentUpon>PaymentVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\Galaxy\ReceiptVoucher.resx">
+      <DependentUpon>ReceiptVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\Galaxy\tlrPaymentVouchercs.resx">
+      <DependentUpon>tlrPaymentVouchercs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\GeneralListAll.resx">
+      <DependentUpon>GeneralListAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\GLChartOfAccounts.resx">
+      <DependentUpon>GLChartOfAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\GLDetailListing.resx">
+      <DependentUpon>GLDetailListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\GLTranList.resx">
+      <DependentUpon>GLTranList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\GSTInputOutputDetailedReport.resx">
+      <DependentUpon>GSTInputOutputDetailedReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\GSTInputOutputSummaryReport.resx">
+      <DependentUpon>GSTInputOutputSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\InsurerReport.resx">
+      <DependentUpon>InsurerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\journalLst.resx">
+      <DependentUpon>journalLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\JournalVoucher.resx">
+      <DependentUpon>JournalVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\MatchTransactionReport.resx">
+      <DependentUpon>MatchTransactionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\PremiumWarrantyLetter.resx">
+      <DependentUpon>PremiumWarrantyLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\ReceiptListing.resx">
+      <DependentUpon>ReceiptListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\OutStandingAgeingReport.resx">
+      <DependentUpon>OutStandingAgeingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\ReceiptLst.resx">
+      <DependentUpon>ReceiptLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\ReceiptVoucher.resx">
+      <DependentUpon>ReceiptVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\RefundLetter.resx">
+      <DependentUpon>RefundLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\StandardRatedListingToInsurer.resx">
+      <DependentUpon>StandardRatedListingToInsurer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\StatementofAccount.resx">
+      <DependentUpon>StatementofAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\StatementofAccount_Insurer.resx">
+      <DependentUpon>StatementofAccount_Insurer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\TaxInvoiceToInsurers.resx">
+      <DependentUpon>TaxInvoiceToInsurers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrBF1.resx">
+      <DependentUpon>tlrBF1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrBF2.resx">
+      <DependentUpon>tlrBF2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrBF3.resx">
+      <DependentUpon>tlrBF3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrBF3S2.resx">
+      <DependentUpon>tlrBF3S2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrBF3S3.resx">
+      <DependentUpon>tlrBF3S3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrBF9.resx">
+      <DependentUpon>tlrBF9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrGoodsAndServiceTaxReturn.resx">
+      <DependentUpon>tlrGoodsAndServiceTaxReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrGSTAdditionalInfo.resx">
+      <DependentUpon>tlrGSTAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrGstBadDebtClaims.resx">
+      <DependentUpon>tlrGstBadDebtClaims.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrGSTSummaryTotAcqInTax.resx">
+      <DependentUpon>tlrGSTSummaryTotAcqInTax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrListDrCrTaxInvForGST.resx">
+      <DependentUpon>tlrListDrCrTaxInvForGST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrPaymentLst.resx">
+      <DependentUpon>tlrPaymentLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrPaymentReciept.resx">
+      <DependentUpon>tlrPaymentReciept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrPaymentVouchercs.resx">
+      <DependentUpon>tlrPaymentVouchercs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\tlrTotSuppNOutTax.resx">
+      <DependentUpon>tlrTotSuppNOutTax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\TransactionLog.resx">
+      <DependentUpon>TransactionLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\TrialBalance.resx">
+      <DependentUpon>TrialBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\TrialBalanceWithOB.resx">
+      <DependentUpon>TrialBalanceWithOB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\UnMatchingReceiptListing.resx">
+      <DependentUpon>UnMatchingReceiptListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReports\VoucherLawton.resx">
+      <DependentUpon>VoucherLawton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Broking\BIB\PrintRenewalNotice.resx">
+      <DependentUpon>PrintRenewalNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Broking\BIB\PrintRenewalSummary.resx">
+      <DependentUpon>PrintRenewalSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Broking\Acclaim\PrintRenewalNotice.resx">
+      <DependentUpon>PrintRenewalNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Broking\Acclaim\PrintRenewalSummary.resx">
+      <DependentUpon>PrintRenewalSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHReports\HBCDailyReport.resx">
+      <DependentUpon>HBCDailyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHReports\IHMasterPolicy.resx">
+      <DependentUpon>IHMasterPolicy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHReports\RptIHSafetySummaryCanSBT.resx">
+      <DependentUpon>RptIHSafetySummaryCanSBT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHReports\RptIHSafetySummaryCanVAT.cs.resx" />
+    <EmbeddedResource Include="IHReports\RptIHSafetySummaryReport.resx">
+      <DependentUpon>RptIHSafetySummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHReports\RptIHSummaryReportVAT.resx">
+      <DependentUpon>RptIHSummaryReportVAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHReports\RptIndividualSummary.resx">
+      <DependentUpon>RptIndividualSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHReports\RptIndividualSummaryReport.resx">
+      <DependentUpon>RptIndividualSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHReports\RptMonthlyAvivaReport.resx">
+      <DependentUpon>RptMonthlyAvivaReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHReports\RptMonthlyProfitability.resx">
+      <DependentUpon>RptMonthlyProfitability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRMLetters\ltrCashCallLetter.resx">
+      <DependentUpon>ltrCashCallLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRMLetters\ltrClaimMovmentLetter.resx">
+      <DependentUpon>ltrClaimMovmentLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRMLetters\ltrCoverNotePrint.resx">
+      <DependentUpon>ltrCoverNotePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRMLetters\ltrINVDebitNoteLetter.resx">
+      <DependentUpon>ltrINVDebitNoteLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRMLetters\ltrInvoiceDebitNoteLetter.resx">
+      <DependentUpon>ltrInvoiceDebitNoteLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRMLetters\ltrPaidClaimAckLetter.resx">
+      <DependentUpon>ltrPaidClaimAckLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\ConsultancyFeeReport.resx">
+      <DependentUpon>ConsultancyFeeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\IN30DGPDetails.resx">
+      <DependentUpon>IN30DGPDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\INPBCWDetails.resx">
+      <DependentUpon>INPBCWDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\INPPWDetails.resx">
+      <DependentUpon>INPPWDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\INPIPWDetails.resx">
+      <DependentUpon>INPIPWDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\Premium30DaysGracePeriod.resx">
+      <DependentUpon>Premium30DaysGracePeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\Premium30DaysGracePeriod_OfficeCopy.resx">
+      <DependentUpon>Premium30DaysGracePeriod_OfficeCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\PremiumBeforeCoverWarranty.resx">
+      <DependentUpon>PremiumBeforeCoverWarranty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\PremiumBeforeCoverWarranty_OfficeCopy.resx">
+      <DependentUpon>PremiumBeforeCoverWarranty_OfficeCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\PremiumInstalmentPaymentWarranty.resx">
+      <DependentUpon>PremiumInstalmentPaymentWarranty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\PremiumInstalmentPaymentWarranty_OfficeCopy.resx">
+      <DependentUpon>PremiumInstalmentPaymentWarranty_OfficeCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\PremiumPaymentWarranty.resx">
+      <DependentUpon>PremiumPaymentWarranty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\PremiumPaymentWarranty_OfficeCopy.resx">
+      <DependentUpon>PremiumPaymentWarranty_OfficeCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\TabularDetails.resx">
+      <DependentUpon>TabularDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Aviva_Annually.resx">
+      <DependentUpon>Aviva_Annually.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Aviva_COI.resx">
+      <DependentUpon>Aviva_COI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Galaxy\PremiumPaymentWarranty.resx">
+      <DependentUpon>PremiumPaymentWarranty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Galaxy\PremiumPaymentWarranty_AccountCopy.resx">
+      <DependentUpon>PremiumPaymentWarranty_AccountCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Galaxy\PremiumPaymentWarranty_FileCopy.resx">
+      <DependentUpon>PremiumPaymentWarranty_FileCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Galaxy\PremiumPaymentWarranty_OfficeCopy.resx">
+      <DependentUpon>PremiumPaymentWarranty_OfficeCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Galaxy\PremiumPaymentWarranty_Original.resx">
+      <DependentUpon>PremiumPaymentWarranty_Original.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Howden\BrokerageDetail.resx">
+      <DependentUpon>BrokerageDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Howden\BrokerageInstallmentDetail.resx">
+      <DependentUpon>BrokerageInstallmentDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Howden\DebitNoteRptCommision_Invoice.resx">
+      <DependentUpon>DebitNoteRptCommision_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Howden\DebitNoteRptGeneralPremiumClosing.resx">
+      <DependentUpon>DebitNoteRptGeneralPremiumClosing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Howden\DebitNoteRptGeneralReport_FileCopy.resx">
+      <DependentUpon>DebitNoteRptGeneralReport_FileCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Howden\DebitNoteRptGeneral_FileCopy.resx">
+      <DependentUpon>DebitNoteRptGeneral_FileCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Howden\DebitNoteRpt_ConsultancyFee.resx">
+      <DependentUpon>DebitNoteRpt_ConsultancyFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Howden\DebitNoteRpt_ConsultancyFeeReport.resx">
+      <DependentUpon>DebitNoteRpt_ConsultancyFeeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Howden\EndorsementRptClient.resx">
+      <DependentUpon>EndorsementRptClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Howden\Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Howden\TaxCreditNoteRpt.resx">
+      <DependentUpon>TaxCreditNoteRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Howden\DebitNoteRptGeneral.resx">
+      <DependentUpon>DebitNoteRptGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\BIB\DebitCreditNoteVessel_LCH.resx">
+      <DependentUpon>DebitCreditNoteVessel_LCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\BIB\DebitNoteRpt_CommissionInward.resx">
+      <DependentUpon>DebitNoteRpt_CommissionInward.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\BIB\DebitNoteRpt_ConsultancyFee.resx">
+      <DependentUpon>DebitNoteRpt_ConsultancyFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\BIB\DebitNoteRptCommision_Invoice.resx">
+      <DependentUpon>DebitNoteRptCommision_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\BIB\DebitNoteRptGeneral.resx">
+      <DependentUpon>DebitNoteRptGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\BIB\DebitNoteRptGeneral_Invoice.resx">
+      <DependentUpon>DebitNoteRptGeneral_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\DirectPremiumRegisterReport.resx">
+      <DependentUpon>DirectPremiumRegisterReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\BIB\DiretCommissionOutgoCreditNote.resx">
+      <DependentUpon>DiretCommissionOutgoCreditNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\BIB\DNCNMotorExcess.resx">
+      <DependentUpon>DNCNMotorExcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\BIB\EndorsementRptClient.resx">
+      <DependentUpon>EndorsementRptClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\BIB\EndorsementRptInsurer.resx">
+      <DependentUpon>EndorsementRptInsurer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\PremiumReportBIB.resx">
+      <DependentUpon>PremiumReportBIB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\PremiumReportSG.resx">
+      <DependentUpon>PremiumReportSG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\PremiumReport.resx">
+      <DependentUpon>PremiumReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Acclaim\ClaimFileReport.resx">
+      <DependentUpon>ClaimFileReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\BIB\TaxCreditNoteRpt.resx">
+      <DependentUpon>TaxCreditNoteRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ClaimFileReport.resx">
+      <DependentUpon>ClaimFileReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\DebitNoteKIBFeeBillingInstallment.resx">
+      <DependentUpon>DebitNoteKIBFeeBillingInstallment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\DebitNoteRptBillingInstallment_Copy.resx">
+      <DependentUpon>DebitNoteRptBillingInstallment_Copy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\DebitNoteRptBillingInstallment.resx">
+      <DependentUpon>DebitNoteRptBillingInstallment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\DebitNoteRptBilling_Acclaim.resx">
+      <DependentUpon>DebitNoteRptBilling_Acclaim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\DebitNoteRptCommision_Invoice.resx">
+      <DependentUpon>DebitNoteRptCommision_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\DebitNoteRptGeneral_Invoice.resx">
+      <DependentUpon>DebitNoteRptGeneral_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\DebitNoteRptGeneral_LCH.resx">
+      <DependentUpon>DebitNoteRptGeneral_LCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\DebitCreditNoteVessel_LCH.resx">
+      <DependentUpon>DebitCreditNoteVessel_LCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\DebitNote_Client.resx">
+      <DependentUpon>DebitNote_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\CreditNote_GI.resx">
+      <DependentUpon>CreditNote_GI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\DebitNote_GI.resx">
+      <DependentUpon>DebitNote_GI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\DNCNMotorExcess_LCH.resx">
+      <DependentUpon>DNCNMotorExcess_LCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\InPatientSubReport.resx">
+      <DependentUpon>InPatientSubReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\LAW\CreditNote_GI.resx">
+      <DependentUpon>CreditNote_GI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\LAW\DebitNote_GI.resx">
+      <DependentUpon>DebitNote_GI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\LAW\IHPrintFormat_Annually.resx">
+      <DependentUpon>IHPrintFormat_Annually.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\LCH\DebitNoteRptGeneral_LCH.resx">
+      <DependentUpon>DebitNoteRptGeneral_LCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\LCH\DebitNoteVessel_LCH.resx">
+      <DependentUpon>DebitNoteVessel_LCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\LCH\DNCNMotorExcess_LCH.resx">
+      <DependentUpon>DNCNMotorExcess_LCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrClaimSummary.resx">
+      <DependentUpon>ltrClaimSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrClaimTop10HospitalBenefit.resx">
+      <DependentUpon>ltrClaimTop10HospitalBenefit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrClientSettled.resx">
+      <DependentUpon>ltrClientSettled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrClientShortfall.resx">
+      <DependentUpon>ltrClientShortfall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrECChineseEnglishFormEnquiryA1.resx">
+      <DependentUpon>ltrECChineseEnglishFormEnquiryA1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrECChineseEnglishFormsEnquiry.resx">
+      <DependentUpon>ltrECChineseEnglishFormsEnquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrECChineseFormEnquiry.resx">
+      <DependentUpon>ltrECChineseFormEnquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrECClientAcknowlegement.resx">
+      <DependentUpon>ltrECClientAcknowlegement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrECClientFollowup.resx">
+      <DependentUpon>ltrECClientFollowup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrECEnglishFormEnquiry.resx">
+      <DependentUpon>ltrECEnglishFormEnquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrECUWAcknowledgement.resx">
+      <DependentUpon>ltrECUWAcknowledgement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrInsurerInpatient.resx">
+      <DependentUpon>ltrInsurerInpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrInsurerInpatient_test.resx">
+      <DependentUpon>ltrInsurerInpatient_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrInsurerOutpatient.resx">
+      <DependentUpon>ltrInsurerOutpatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrInsurerOutpatient1.resx">
+      <DependentUpon>ltrInsurerOutpatient1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrInsurerOutpatient_doc.resx">
+      <DependentUpon>ltrInsurerOutpatient_doc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrInsurerOutpatient_new.resx">
+      <DependentUpon>ltrInsurerOutpatient_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrMCClientAcknowledgment.resx">
+      <DependentUpon>ltrMCClientAcknowledgment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrMCClientFaxAcknowledgement.resx">
+      <DependentUpon>ltrMCClientFaxAcknowledgement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrMCUWFaxAcknowledgement.resx">
+      <DependentUpon>ltrMCUWFaxAcknowledgement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrMedicalPaid.resx">
+      <DependentUpon>ltrMedicalPaid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrMedRenInvitation.resx">
+      <DependentUpon>ltrMedRenInvitation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrMovementCover.resx">
+      <DependentUpon>ltrMovementCover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrMVClientFaxAcknowledgement.resx">
+      <DependentUpon>ltrMVClientFaxAcknowledgement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrMVClientFaxEnquiry.resx">
+      <DependentUpon>ltrMVClientFaxEnquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrMVUWFaxAcknowledgement.resx">
+      <DependentUpon>ltrMVUWFaxAcknowledgement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrNonMedicalRenInvitation.resx">
+      <DependentUpon>ltrNonMedicalRenInvitation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrPARClientAcknowledgement.resx">
+      <DependentUpon>ltrPARClientAcknowledgement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrPARFollowUP.resx">
+      <DependentUpon>ltrPARFollowUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrPARStatusEnquiry.resx">
+      <DependentUpon>ltrPARStatusEnquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrPARUWAcknowledgement.resx">
+      <DependentUpon>ltrPARUWAcknowledgement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrPolicySlip.resx">
+      <DependentUpon>ltrPolicySlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrSlip.resx">
+      <DependentUpon>ltrSlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrSlipN.resx">
+      <DependentUpon>ltrSlipN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrSlipSubreport.resx">
+      <DependentUpon>ltrSlipSubreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrSliptest.resx">
+      <DependentUpon>ltrSliptest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrSlip_new.resx">
+      <DependentUpon>ltrSlip_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\ltrTopTenAmtByHospital.resx">
+      <DependentUpon>ltrTopTenAmtByHospital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Premium30DaysGracePeriod.resx">
+      <DependentUpon>Premium30DaysGracePeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\PremiumBeforeCoverWarranty.resx">
+      <DependentUpon>PremiumBeforeCoverWarranty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\PremiumInstalmentPaymentWarranty.resx">
+      <DependentUpon>PremiumInstalmentPaymentWarranty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\PremiumPaymentWarranty.resx">
+      <DependentUpon>PremiumPaymentWarranty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\PrintCoverNote.resx">
+      <DependentUpon>PrintCoverNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\Renewal_Report.resx">
+      <DependentUpon>Renewal_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\rptClaimReport.resx">
+      <DependentUpon>rptClaimReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\rptClaimReportCover.resx">
+      <DependentUpon>rptClaimReportCover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\RptEBBenefitLimitSummary.resx">
+      <DependentUpon>RptEBBenefitLimitSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\RptEBPolPlan.resx">
+      <DependentUpon>RptEBPolPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\RptEBPremiumRateSummary.resx">
+      <DependentUpon>RptEBPremiumRateSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letters\RptEBPremiumSummary.resx">
+      <DependentUpon>RptEBPremiumSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AccountReports\ACCLAIM\" />
+    <Folder Include="AccountReports\KIB\" />
+    <Folder Include="AccountReports\LAWTON\" />
+    <Folder Include="AccountReports\LCH\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

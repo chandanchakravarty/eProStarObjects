@@ -1,0 +1,10 @@
+D:\GIT Projects\eProStarObjects\eProStarObjects\Bin\BusinessAccessLayer.dll
+D:\GIT Projects\eProStarObjects\eProStarObjects\Bin\BusinessAccessLayer.pdb
+D:\GIT Projects\eProStarObjects\eProStarObjects\BusinessAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\GIT Projects\eProStarObjects\eProStarObjects\BusinessAccessLayer\obj\Debug\BusinessAccessLayer.dll
+D:\GIT Projects\eProStarObjects\eProStarObjects\BusinessAccessLayer\obj\Debug\BusinessAccessLayer.pdb
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\Bin\BusinessAccessLayer.dll
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\Bin\BusinessAccessLayer.pdb
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\BusinessAccessLayer\obj\Debug\BusinessAccessLayer.csprojResolveAssemblyReference.cache
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\BusinessAccessLayer\obj\Debug\BusinessAccessLayer.dll
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\BusinessAccessLayer\obj\Debug\BusinessAccessLayer.pdb

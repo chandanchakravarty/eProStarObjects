@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0BF54477-F918-4B89-94E9-813D4ED3E4B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessAccessLayer</RootNamespace>
+    <AssemblyName>BusinessAccessLayer</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/BusinessAccessLayer/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EtrekReports, Version=3.0.10.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataAccessLayer\ReferenceDLLs\EtrekReports.dll</HintPath>
+    </Reference>
+    <Reference Include="LumenWorks.Framework.IO, Version=3.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataAccessLayer\ReferenceDLLs\LumenWorks.Framework.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\DataAccessLayer\ReferenceDLLs\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountModule\clsACCommon.cs" />
+    <Compile Include="Admin\clsLoginManager.cs" />
+    <Compile Include="Admin\clsMenuManager.cs" />
+    <Compile Include="BrokingModule\BMCommon\clsBMCommon.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BACommonTypes.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BenefitGroupLine.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BenefitScheduleManager.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BM_ExtraneousPerilsMasterManager.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BM_FireTariffGroupMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BM_InclusionApproval.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BM_LocationExtraneousPerils.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BM_LocationInterestMasterManager.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BM_MotorTariffMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BM_TemplateUnderWriter.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BM_VehicleDetailMasterManager.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsBenefitLineManager.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsBMSchemeManager.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsEmailGroupManager.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsIHProductManager.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsLegislationNoteManager.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsNewPremiumRateManager.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BM_HeaderMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BM_TemplateMapping.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\BM_TemplateMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\clsPaymentModeManager.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\DocumentComMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\IHPremiumRating.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\IHSchedulelimitManager.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\IllnessMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\InterestMaster.cs" />
+    <Compile Include="BrokingModule\BrokingAdmin\TemplateDefault.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\AgentRequestManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\BMAutoCompleteManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\ECClaimManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Claims\NonECClaimManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\ClientReassignment.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsClientManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsClientReassignment.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsEmailNotification.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\CPD\clsCPDManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\DebitNoteWOCNPDFGenerator.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EBClaims\EBClaimManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\clsMailToAcountHandler.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\EmployeeBenefits\EBMemberManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\CoverNoteManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\DomesticHelperManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\InsuredPersonDetailManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\InsuredPersonRatingDetailManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\MotroDetailsManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\MultiBillingManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\QuotationManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\RenewalLetterPDFGenerator.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\UWCoverageManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\Quotation\VesselDetailManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\ICD10Manager.cs" />
+    <Compile Include="BrokingModule\Reports\clsCtrlReportsManager.cs" />
+    <Compile Include="BrokingModule\Reports\clsEBLetterManager.cs" />
+    <Compile Include="BrokingModule\Reports\clsPolicySlipManager.cs" />
+    <Compile Include="Common\clsApprovalProcess.cs" />
+    <Compile Include="Common\ClsEntityApproval.cs" />
+    <Compile Include="Common\JobScheduleManager.cs" />
+    <Compile Include="Common\MailHelperManager.cs" />
+    <Compile Include="FlexServices\FlexBS\ExportManager.cs" />
+    <Compile Include="FlexServices\FlexBS\FlexDebitNoteCsvToBS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlexServices\FlexBS\GenerateCsvFile.cs" />
+    <Compile Include="FlexServices\FlexBS\ImportManager.cs" />
+    <Compile Include="Common\EnumSwitch.cs" />
+    <Compile Include="Common\RequestApprovalPDFGenerator.cs" />
+    <Compile Include="FlexServices\FlexIRM\ExportManager.cs" />
+    <Compile Include="FlexServices\FlexIRM\FlexClaimCsvToIRM.cs" />
+    <Compile Include="FlexServices\FlexIRM\FlexDebitNoteCsvToBS.cs" />
+    <Compile Include="FlexServices\FlexIRM\GenerateCsvFile.cs" />
+    <Compile Include="FlexServices\FlexIRM\ImportManager.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\clsExcessManager.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\clsLegislationNoteManager.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\ConditionMaster.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\ConditionTemplate.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\ConditionTemplateMapping.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\ExportPremiumInvSetupManager.cs" />
+    <Compile Include="RIBrokingModule\Claims\RIClaimManager.cs" />
+    <Compile Include="RIBrokingModule\CoverNote\RICoverNoteManager.cs" />
+    <Compile Include="RIBrokingModule\Invoice\RIInvoiceManager.cs" />
+    <Compile Include="RIBrokingModule\Reports\clsCLMLetterManager.cs" />
+    <Compile Include="RIBrokingModule\Reports\clsReportManager.cs" />
+    <Compile Include="RIBrokingModule\RIAutoCompleteManager.cs" />
+    <Compile Include="RIBrokingModule\RIBrokingSystem\clsCedantManager.cs" />
+    <Compile Include="RIBrokingModule\RIBrokingSystem\clsIRMAutoCompleteManager.cs" />
+    <Compile Include="RIBrokingModule\RIBrokingSystem\clsReinsurerManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\clsUnderwriterManager.cs" />
+    <Compile Include="BrokingModule\BrokingSystem\DebiteNoteWOCoverNoteManager.cs" />
+    <Compile Include="Common\FileUpload.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\ClaimAgentMasterManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\BankMasterManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\CauseOfInjuryMasterManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\ClaimPaymentTypeManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\DiagnosisMasterManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\FollowUpReasonMasterManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\LossNatureManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\LossTypeManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\NatureOfInjuryMasterManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\PartOfBodyMasterManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\PaymentDescManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\PendingReasonMasterManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\RejectReasonMasterManager.cs" />
+    <Compile Include="BrokingModule\ClaimAdmin\SurgicalProcedureMasterManager.cs" />
+    <Compile Include="Common\clsAttachment.cs" />
+    <Compile Include="Common\clsCommon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Audit.cs" />
+    <Compile Include="Common\FileUploadManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\RI_DepartmentManager.cs" />
+    <Compile Include="RIBrokingModule\RIClaimAdmin\LocationMaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RIBrokingModule\RIClaimAdmin\RemarkMaster.cs" />
+    <Compile Include="SystemAdmin\AccountMaster\AccPeriod.cs" />
+    <Compile Include="SystemAdmin\AccountMaster\AnalysisCodeEnquiryManager.cs" />
+    <Compile Include="SystemAdmin\AccountMaster\clsBankManager.cs" />
+    <Compile Include="SystemAdmin\AccountMaster\CurrExchangeRate.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsClassTempSortOrderManager.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsGroupManager.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsSCMasterManager.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsClassTemplateManager.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsSubGroupManager.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\SubClassTemplateManager.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsSubClassTempSortOrderManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\BM_ClientSegmentMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\BM_IndustryMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\BM_SuspTermReasonMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\BranchMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\ClientBandingManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\ClientProfileMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\ClientSourceManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SystemAdmin\ClientSetup\ClientSource_IndustryType_RiskProfileManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\Client_BranchMasterManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\CorpGrpManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\OccupationMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\ProfitCentreManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\ProvinceMasterManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\RegionManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\RegionMaster.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\SCManager.cs" />
+    <Compile Include="RIBrokingModule\BrokingAdmin\RI_ProvinceMasterManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\CityMasterManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\SOBManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\SubDistrictMasterManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\SubsidiarySCode1Manager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\SubsidiarySCode2Manager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\TerritoryMasterManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\VAT_SBT_WHT_Manager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\VIPClassificationManager.cs" />
+    <Compile Include="SystemAdmin\ClientSetup\WorldRegionMaster.cs" />
+    <Compile Include="SystemAdmin\clsMigartionManager.cs" />
+    <Compile Include="SystemAdmin\LetterTemplates\clsLetterManager.cs" />
+    <Compile Include="SystemAdmin\Reports\clsProductionReport.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\BroadcastMasterManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsBranchListManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsCompanyListManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsEndUserManualManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsGroupAccessManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsUserAccessAssignmentManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsUserSuspensionManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\CompanyMasterManager.cs" />
+    <Compile Include="SystemAdmin\AccountMaster\clsCurrencyManager.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsBranchManager.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsBusinessNatureManager.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\clsSubClassManager.cs" />
+    <Compile Include="SystemAdmin\AnalysisCode\SA_ClassManager.cs" />
+    <Compile Include="SystemAdmin\clsAdmin.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\clsUserMasterManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\DivisionalGroupingManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\DocumentComplianceManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\ElementAccessManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\ExcessDeductibleManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\LedgerClassManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\LedgerSubClassManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\MasTransfAuthorityManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\ProducerMasterManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\SA_GradeManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\TeamManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\UserAccessManager.cs" />
+    <Compile Include="SystemAdmin\UserSetUp\UserReassignmentManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObjectLayer\BusinessObjectLayer.csproj">
+      <Project>{E846FAEE-42EF-40AF-B901-0EE45FD5990F}</Project>
+      <Name>BusinessObjectLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{C6C6DD82-B1F3-4285-ADAD-3964EBF24971}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{c7b08fde-d301-4521-9454-bf4de1c3e8b5}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObjectLayer\BusinessObjectLayer.csproj">
+      <Project>{E846FAEE-42EF-40AF-B901-0EE45FD5990F}</Project>
+      <Name>BusinessObjectLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{C6C6DD82-B1F3-4285-ADAD-3964EBF24971}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{C7B08FDE-D301-4521-9454-BF4DE1C3E8B5}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Accounts\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

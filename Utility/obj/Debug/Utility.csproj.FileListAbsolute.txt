@@ -1,0 +1,10 @@
+D:\GIT Projects\eProStarObjects\eProStarObjects\Bin\Utility.dll
+D:\GIT Projects\eProStarObjects\eProStarObjects\Bin\Utility.pdb
+D:\GIT Projects\eProStarObjects\eProStarObjects\Utility\obj\Debug\ResolveAssemblyReference.cache
+D:\GIT Projects\eProStarObjects\eProStarObjects\Utility\obj\Debug\Utility.dll
+D:\GIT Projects\eProStarObjects\eProStarObjects\Utility\obj\Debug\Utility.pdb
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\Bin\Utility.dll
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\Bin\Utility.pdb
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\Utility\obj\Debug\Utility.dll
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\Utility\obj\Debug\Utility.pdb
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache

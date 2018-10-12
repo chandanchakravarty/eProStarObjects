@@ -1,0 +1,10 @@
+D:\GIT Projects\eProStarObjects\eProStarObjects\Bin\DataAccessLayer.dll
+D:\GIT Projects\eProStarObjects\eProStarObjects\Bin\DataAccessLayer.pdb
+D:\GIT Projects\eProStarObjects\eProStarObjects\DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\GIT Projects\eProStarObjects\eProStarObjects\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\GIT Projects\eProStarObjects\eProStarObjects\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\Bin\DataAccessLayer.dll
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\Bin\DataAccessLayer.pdb
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+\\192.168.91.36\GIT Projects\eProStarObjects\eProStarObjects\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

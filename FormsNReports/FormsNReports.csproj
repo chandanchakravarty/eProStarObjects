@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ADBCE89C-1418-4C3F-88B2-0CF6F625CB16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FormsNReports</RootNamespace>
+    <AssemblyName>FormsNReports</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EtrekReports, Version=3.0.10.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataAccessLayer\ReferenceDLLs\EtrekReports.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=8.0.14.225, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Telerik.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Service, Version=8.0.14.225, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataAccessLayer\ReferenceDLLs\Telerik.Reporting.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=3.2.9.1104, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataAccessLayer\ReferenceDLLs\Telerik.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BalanceSheet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BalanceSheet.Designer.cs">
+      <DependentUpon>BalanceSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyProductivityByClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CompanyProductivityByClass.Designer.cs">
+      <DependentUpon>CompanyProductivityByClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsCreditorReconReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DetailsCreditorReconReport.Designer.cs">
+      <DependentUpon>DetailsCreditorReconReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FinancialReport.Designer.cs">
+      <DependentUpon>FinancialReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GLTranList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GLTranList.Designer.cs">
+      <DependentUpon>GLTranList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GstReport.cs" />
+    <Compile Include="InsurerReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InsurerReport.Designer.cs">
+      <DependentUpon>InsurerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="journalLst.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="journalLst.Designer.cs">
+      <DependentUpon>journalLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JournalVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JournalVoucher.designer.cs">
+      <DependentUpon>JournalVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchTransactionReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MatchTransactionReport.Designer.cs">
+      <DependentUpon>MatchTransactionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MiscUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptLst.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReceiptLst.Designer.cs">
+      <DependentUpon>ReceiptLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatementofAccount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StatementofAccount.Designer.cs">
+      <DependentUpon>StatementofAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatementofAccount_Insurer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StatementofAccount_Insurer.Designer.cs">
+      <DependentUpon>StatementofAccount_Insurer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxInvoiceToInsurer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TaxInvoiceToInsurer.Designer.cs">
+      <DependentUpon>TaxInvoiceToInsurer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrGoodsAndServiceTaxReturn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrGoodsAndServiceTaxReturn.Designer.cs">
+      <DependentUpon>tlrGoodsAndServiceTaxReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrGSTAdditionalInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrGSTAdditionalInfo.Designer.cs">
+      <DependentUpon>tlrGSTAdditionalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrGstBadDebtClaims.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrGstBadDebtClaims.Designer.cs">
+      <DependentUpon>tlrGstBadDebtClaims.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrGSTSummaryTotAcqInTax.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrGSTSummaryTotAcqInTax.Designer.cs">
+      <DependentUpon>tlrGSTSummaryTotAcqInTax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrListDrCrTaxInvForGST.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrListDrCrTaxInvForGST.Designer.cs">
+      <DependentUpon>tlrListDrCrTaxInvForGST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrPaymentReciept.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrPaymentReciept.designer.cs">
+      <DependentUpon>tlrPaymentReciept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrTotSuppNOutTax.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrTotSuppNOutTax.Designer.cs">
+      <DependentUpon>tlrTotSuppNOutTax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrialBalanceWithOB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TrialBalanceWithOB.Designer.cs">
+      <DependentUpon>TrialBalanceWithOB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnMatchingReceiptListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UnMatchingReceiptListing.Designer.cs">
+      <DependentUpon>UnMatchingReceiptListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoucherLawton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VoucherLawton.Designer.cs">
+      <DependentUpon>VoucherLawton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecieptVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RecieptVoucher.designer.cs">
+      <DependentUpon>RecieptVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportUtility.cs" />
+    <Compile Include="StandardRatedListingToInsurer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StandardRatedListingToInsurer.Designer.cs">
+      <DependentUpon>StandardRatedListingToInsurer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrBF1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrBF1.Designer.cs">
+      <DependentUpon>tlrBF1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrBF2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrBF2.Designer.cs">
+      <DependentUpon>tlrBF2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrBF3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrBF3.Designer.cs">
+      <DependentUpon>tlrBF3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrBF3S2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrBF3S2.Designer.cs">
+      <DependentUpon>tlrBF3S2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrBF3S3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrBF3S3.Designer.cs">
+      <DependentUpon>tlrBF3S3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrBF9.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrBF9.Designer.cs">
+      <DependentUpon>tlrBF9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrPaymentLst.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrPaymentLst.designer.cs">
+      <DependentUpon>tlrPaymentLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tlrPaymentVouchercs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tlrPaymentVouchercs.designer.cs">
+      <DependentUpon>tlrPaymentVouchercs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionLog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TransactionLog.Designer.cs">
+      <DependentUpon>TransactionLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrialBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TrialBalance.Designer.cs">
+      <DependentUpon>TrialBalance.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BalanceSheet.resx">
+      <DependentUpon>BalanceSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanyProductivityByClass.resx">
+      <DependentUpon>CompanyProductivityByClass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailsCreditorReconReport.resx">
+      <DependentUpon>DetailsCreditorReconReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinancialReport.resx">
+      <DependentUpon>FinancialReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GLTranList.resx">
+      <DependentUpon>GLTranList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsurerReport.resx">
+      <DependentUpon>InsurerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="journalLst.resx">
+      <DependentUpon>journalLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JournalVoucher.resx">
+      <DependentUpon>JournalVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchTransactionReport.resx">
+      <DependentUpon>MatchTransactionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptLst.resx">
+      <DependentUpon>ReceiptLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatementofAccount.resx">
+      <DependentUpon>StatementofAccount.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatementofAccount_Insurer.resx">
+      <DependentUpon>StatementofAccount_Insurer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxInvoiceToInsurer.resx">
+      <DependentUpon>TaxInvoiceToInsurer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrGoodsAndServiceTaxReturn.resx">
+      <DependentUpon>tlrGoodsAndServiceTaxReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrGSTAdditionalInfo.resx">
+      <DependentUpon>tlrGSTAdditionalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrGstBadDebtClaims.resx">
+      <DependentUpon>tlrGstBadDebtClaims.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrGSTSummaryTotAcqInTax.resx">
+      <DependentUpon>tlrGSTSummaryTotAcqInTax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrListDrCrTaxInvForGST.resx">
+      <DependentUpon>tlrListDrCrTaxInvForGST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrPaymentReciept.resx">
+      <DependentUpon>tlrPaymentReciept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrTotSuppNOutTax.resx">
+      <DependentUpon>tlrTotSuppNOutTax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrialBalanceWithOB.resx">
+      <DependentUpon>TrialBalanceWithOB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnMatchingReceiptListing.resx">
+      <DependentUpon>UnMatchingReceiptListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoucherLawton.resx">
+      <DependentUpon>VoucherLawton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecieptVoucher.resx">
+      <DependentUpon>RecieptVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StandardRatedListingToInsurer.resx">
+      <DependentUpon>StandardRatedListingToInsurer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrBF1.resx">
+      <DependentUpon>tlrBF1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrBF2.resx">
+      <DependentUpon>tlrBF2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrBF3.resx">
+      <DependentUpon>tlrBF3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrBF3S2.resx">
+      <DependentUpon>tlrBF3S2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrBF3S3.resx">
+      <DependentUpon>tlrBF3S3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrBF9.resx">
+      <DependentUpon>tlrBF9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrPaymentLst.resx">
+      <DependentUpon>tlrPaymentLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlrPaymentVouchercs.resx">
+      <DependentUpon>tlrPaymentVouchercs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionLog.resx">
+      <DependentUpon>TransactionLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrialBalance.resx">
+      <DependentUpon>TrialBalance.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessAccessLayer\BusinessAccessLayer.csproj">
+      <Project>{0BF54477-F918-4B89-94E9-813D4ED3E4B2}</Project>
+      <Name>BusinessAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
